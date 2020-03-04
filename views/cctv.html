@@ -10,33 +10,49 @@
 	</head>
 	<body class="is-preload">
 		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+		<div id="page-wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="../index.html">Home</a></h1>
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="../index.html">Home</a></h1>
+				</header>
+
+			<!-- Wrapper -->
+				<section id="wrapper">
+					<header>
+						<div class="inner">
+							<h2 class="major">Video Surveillance</h2>
+							<p>View and record video from up to four cameras</p>
+							I wanted to create a video surveillance system where I could record video from multiple cheap USB and IP cameras simultaneously with scheduled and motion activated recordings.
+						</div>
 					</header>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<header>
+					<!-- Content -->
+						<div class="wrapper">
 							<div class="inner">
-								<h2>CCTV</h2>
-								<p>Lorem ipsum dolor.</p>
+								<h3 class="major">Implementation</h3>
+								<p>
+									This was my final year Computer Science Degree project, built with .NET Winforms. Images are retrieved and event based image updates allow the captured image to be 
+									processed for on screen information, private area definition and motion detection before being displayed on screen. Scheduled and motion activated recordings can be 
+									configured and a search option displays all recordings on a selected date which can be viewed using the in built video player.
+								</p>
+								<p>
+									Any IP camera that allows for jpeg image capture can be used and by running a simple service on the PC with a connected USB camera we can treat it as an IP camera.
+								</p>
+								<p>
+									Motion detection is implemented by comparing the previous and current image captures using pixel XOR comparison. If the number of pixels different are above a 
+									configured threshold, motion has triggered. 
+								</p>
+								<p>
+									Video clips can be saved using AVIWriter to create an avi file from multiple images saved per second and the resultant files played back using VLC Player library.
+								</p>
 							</div>
-						</header>
-
-						<!-- Content -->
-							<div class="wrapper">
-								<div class="inner">
-
-									<h3 class="major">Lorem ipsum dolor</h3>
-									<p>Lorem ipsum dolor.</p>
-									<p>Lorem ipsum dolor.</p>
-								</div>
-							</div>
-					</section>
-			</div>
+							<div class="inner">
+								<a href="https://github.com/FrankDunlop/CCTV-System" class="special">View Code</a>
+							</div>	
+						</div>
+				</section>
+		</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

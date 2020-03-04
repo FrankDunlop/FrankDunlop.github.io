@@ -21,19 +21,40 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>SMARTHome</h2>
-								<p>Lorem ipsum dolor.</p>
+								<h2 class="major">SMARTHome</h2>
+								<p>Control your household appliances remotely using wireless switches</p>
+								I wanted to be able to control my heating, immersion and lighting remotely through the use of sonoff wireless switches without using the sonoff mobile app and cloud services which did not provide all the functionality I required.
 							</div>
 						</header>
 
 						<!-- Content -->
 							<div class="wrapper">
 								<div class="inner">
-
-									<h3 class="major">Lorem ipsum dolor</h3>
-									<p>Lorem ipsum dolor.</p>
-									<p>Lorem ipsum dolor.</p>
+									<h3 class="major">Implementation</h3>
+									<p>
+										Home automation is "The Internet of Things", it simply means the way all devices or appliances are networked together to provide users with seamless control of their home equipment.
+										The <a href="https://sonoff.tech/product/wifi-diy-smart-switches/basicr2">Sonoff basic</a> is an affordable WiFi smart switch that provides users with smart home control. 
+										It is a remote control power switch that can connect to a wide range of appliances. It transmits data to an AWS global server through the WiFi Router, 
+										which enables users to remotely control all the connected appliances, via the mobile application eWeLink.
+									</p>
+									<p>
+										I wanted to have more control of the switch allowing me to turn on and off switches based on external inputs such as internal room temperature and external temperature in real time. </br>
+										To do this I used a <a href="https://components101.com/dht11-temperature-sensor"> DHT temperature and humidity sensor</a> connected to a Raspberry PI to read room temperature and turn on 
+										central heating when the temperature falls below a configured level. I also use the <a href="https://openweathermap.org/api">OpenWeather API</a> to get the current weather forecast 
+										and can turn on or off the heating based on the reading.
+									</p>
+									<p>
+										<a href="https://github.com/socketio/socket.io">Socket.IO</a> enables real-time, bidirectional and event-based communication. It works on every platform, browser or device, focusing equally on reliability and speed.
+										This enables us to comminicate with the wireless switches in real time via a Node.js server hosted on a <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi</a>.
+									</p>
+									</p>
+										Because we dont have access to the switch functionality directly, I use <a href="https://ifttt.com/">IFTTT</a> (If this, then that), a software platform that connects apps, devices and services from from different developers in order to trigger 
+										one or more automations involving those apps, devices and services via applets. 
+									<p>
 								</div>
+								<div class="inner">
+									<a href="https://github.com/FrankDunlop/SMARTHome" class="special">View Code</a>
+								</div>	
 							</div>
 					</section>
 			</div>
